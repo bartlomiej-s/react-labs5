@@ -2,15 +2,22 @@ import React from 'react'
 
 class PlayerTwo extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
 			name: "<name from input field>",
       number: 0,
       button: "Play"
-		  };
+		  }
   }
 
+  changeName(nameNew) {
+    this.state = {
+      name: nameNew,
+      number: this.state.number,
+      button: this.state.button
+    }
+  }
 
   render() {
     const PlayerTwoVar = (

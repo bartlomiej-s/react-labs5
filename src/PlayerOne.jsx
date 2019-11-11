@@ -2,13 +2,21 @@ import React from 'react'
 
 class PlayerOne extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
 			name: "<name from input field>",
       number: 0,
       button: "Play"
-		  };
+		  }
+  }
+
+  changeName(nameNew) {
+    this.state = {
+      name: nameNew,
+      number: this.state.number,
+      button: this.state.button
+    }
   }
 
 
