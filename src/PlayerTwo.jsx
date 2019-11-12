@@ -11,6 +11,7 @@ class PlayerTwo extends React.Component {
     }
     this.changeName = this.changeName.bind(this)
     this.click = this.click.bind(this)
+    this.count = this.count.bind(this)
   }
 
   changeName(nameNew) {
@@ -22,6 +23,12 @@ class PlayerTwo extends React.Component {
   click() {
     this.setState({
       button: (this.state.button + 1) % 2
+    })
+  }
+
+  count() {
+    this.setState({
+      number: this.state.number + 1
     })
   }
 

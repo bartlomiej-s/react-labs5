@@ -1,7 +1,6 @@
 import React from 'react'
 import PlayerOne from './PlayerOne'
 import PlayerTwo from './PlayerTwo'
-import { PropTypes } from 'react'
 
 class GameAdmin extends React.Component {
 
@@ -39,6 +38,7 @@ class GameAdmin extends React.Component {
       this.player1.click()
       this.player2.click()
     }
+    this.player1.count()
   }
 
   click2() {
@@ -54,13 +54,14 @@ class GameAdmin extends React.Component {
       this.player1.click()
       this.player2.click()
     }
+    this.player2.count()
   }
 
   render() {
     const GameAdminVar = (
       <div>
       <PlayerOne ref={el => this.player1 = el} click={this.click1}/> <br />
-      <PlayerOne ref={el => this.player2 = el} click={this.click2}/> <br /> <br />
+      <PlayerTwo ref={el => this.player2 = el} click={this.click2}/> <br /> <br />
       <hr /> <br />
       <p>
         Set Name of Player One: <input type="text" name="player1" onChange={this.change1} style={{float: 'right', width:'85%'}}/> <br /> <br /> <br />

@@ -1,6 +1,4 @@
 import React from 'react'
-import { timingSafeEqual } from 'crypto'
-import { PropTypes } from 'react'
 
 class PlayerOne extends React.Component {
 
@@ -13,6 +11,7 @@ class PlayerOne extends React.Component {
     }
     this.changeName = this.changeName.bind(this)
     this.click = this.click.bind(this)
+    this.count = this.count.bind(this)
   }
 
   changeName(nameNew) {
@@ -24,6 +23,12 @@ class PlayerOne extends React.Component {
   click() {
     this.setState({
       button: (this.state.button + 1) % 2
+    })
+  }
+
+  count() {
+    this.setState({
+      number: this.state.number + 1
     })
   }
 
